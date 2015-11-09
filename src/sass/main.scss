@@ -29,31 +29,6 @@
 // @import 'helpers/text-align';
 @import 'helpers/background';
 @import 'helpers/color';
-
-$DEBUG: false;
-
-@if $DEBUG {
-    body {
-        position: relative;
-
-        &:after {
-            content: 'default';
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: 9999;
-            display: block;
-            background: red;
-            font-family: sans-serif;
-            text-transform: uppercase;
-            color: #fff;
-            padding: 5px;
-
-            @each $breakpoint-name, $breakpoint-size in $breakpoints {
-                @include media($breakpoint-size) {
-                    content: '#{$breakpoint-name}';
-                }
-            }
 // @import 'helpers/hide';
 // @import 'helpers/show';
         }
