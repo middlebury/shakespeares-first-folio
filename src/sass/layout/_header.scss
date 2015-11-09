@@ -1,0 +1,39 @@
+$logo-width: 45px;
+$gutter-width: 15px;
+$wordmark-spacing: 12px;
+
+.global-header {
+    background-color: $middlebury-blue;
+    height: 50px;
+    position: relative;
+    z-index: 3;
+}
+.global-header-logo {
+    text-align: center;
+    margin: 0 auto;
+    width: $logo-width;
+    position: absolute;
+    left: 50%;
+    top: 10px;
+    transform: translateX(-50%);
+
+    @include media(md) {
+        position: absolute;
+        left: 15px;
+        top: 13px;
+        z-index: 3;
+        transform: none;
+    }
+}
+
+.global-header-wordmark {
+    display: none;
+    width: 107px;
+
+    @include media(md) {
+        display: block;
+        position: absolute;
+        top: 21px;
+        left: $logo-width + $gutter-width + $wordmark-spacing;
+    }
+}
