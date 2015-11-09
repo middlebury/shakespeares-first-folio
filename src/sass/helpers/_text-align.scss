@@ -1,0 +1,28 @@
+// text-left skipped since it's default
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+$text-alignments: ('left', 'right', 'center');
+
+// $screen-sizes in ../core/_variables.scss
+@each $screen-name, $screen-size in $breakpoints {
+
+    @each $alignment in $text-alignments {
+
+        @include media($screen-size) {
+
+            .text-#{$screen-name}-#{$alignment} {
+                text-align: #{$alignment};
+            }
+
+        }
+
+    }
+
+}

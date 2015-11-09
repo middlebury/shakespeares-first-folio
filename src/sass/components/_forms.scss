@@ -1,0 +1,38 @@
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-control {
+    font-size: 16px;
+    padding: 1em;
+    background: $white;
+    display: block;
+    width: 100%;
+    border: 1px solid $gray;
+    border-radius: 0;
+
+    &:hover {
+        box-shadow: 0 0 10px rgba($black, .1);
+    }
+
+    &:focus {
+        box-shadow: 0 0 10px rgba($black, .2);
+        outline: 0;
+    }
+
+    @at-root textarea#{&} {
+        min-height: 200px;
+    }
+
+    .has-error & {
+        border-bottom: 2px solid tomato;
+    }
+}
+
+.form-actions {
+    @include clearfix();
+
+    .btn {
+        float: right;
+    }
+}

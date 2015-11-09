@@ -1,0 +1,27 @@
+$scale: 16px;
+$scale-amount: 4;
+
+$scale-types: (
+    "p": ("padding"),
+    "pt": ("padding-top"),
+    "pb": ("padding-bottom"),
+    "ptb": ("padding-top", "padding-bottom"),
+);
+
+@for $i from 0 through $scale-amount {
+
+    $size: $i * 1.6 * $scale;
+
+    @each $type-name, $declarations in $scale-types {
+
+        .#{$type-name}#{$i} {
+
+            @each $declaration in $declarations {
+                #{$declaration}: ceil($size);
+            }
+
+        }
+
+    }
+
+}

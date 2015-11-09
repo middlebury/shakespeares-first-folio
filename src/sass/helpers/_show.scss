@@ -1,0 +1,11 @@
+@each $breakpoint-name, $breakpoint-size in $breakpoints {
+
+    .show-#{$breakpoint-name}-up {
+        display: none;
+
+        @include media($breakpoint-size) {
+            display: inherit;
+        }
+    }
+
+}

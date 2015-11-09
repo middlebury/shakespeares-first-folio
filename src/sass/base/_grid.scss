@@ -1,0 +1,77 @@
+$grid-prefix: 'col' !default;
+$grid-columns: 12;
+$grid-gutter-width: 30px;
+
+@if ($grid-prefix != '') {
+    $grid-prefix: "#{$grid-prefix}-";
+}
+
+%container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: ($grid-gutter-width / 2);
+    padding-right: ($grid-gutter-width / 2);
+}
+
+.container {
+    max-width: 1170px;
+    @extend %container;
+}
+
+.container-fluid {
+    max-width: 100%;
+    @extend %container;
+}
+
+.row {
+    @include clearfix();
+    margin-left: -($grid-gutter-width / 2);
+    margin-right: -($grid-gutter-width / 2);
+}
+
+[class*="#{$grid-prefix}"] {
+    float: left;
+    min-height: 1px;
+    position: relative;
+    padding-left: ($grid-gutter-width / 2);
+    padding-right: ($grid-gutter-width / 2);
+}
+
+@mixin grid($size, $columns: 12) {
+
+    @for $index from 1 through $columns {
+
+        .#{$grid-prefix}#{$size}-#{$index} {
+            width: percentage(($index / $columns));
+        }
+
+    }
+
+}
+
+@mixin push($size, $columns: 12) {
+    @for $index from 1 through $columns {
+        .#{$grid-prefix}#{$size}-push-#{$index} {
+            left: percentage(($index / $columns));
+        }
+    }
+}
+
+@mixin pull($size, $columns: 12) {
+    @for $index from 1 through $columns {
+        .#{$grid-prefix}#{$size}-pull-#{$index} {
+            right: percentage(($index / $columns));
+        }
+    }
+}
+
+@each $breakpoint-name, $breakpoint-size in $breakpoints {
+
+    @include media($breakpoint-size) {
+
+        @include grid($breakpoint-name, $grid-columns);
+        @include push($breakpoint-name, $grid-columns);
+        @include pull($breakpoint-name, $grid-columns);
+
+    }
+}

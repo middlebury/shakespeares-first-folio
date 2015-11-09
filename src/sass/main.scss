@@ -1,0 +1,61 @@
+// Core functionality / settings
+@import 'core/functions';
+@import 'core/variables';
+@import 'core/placeholders';
+@import 'core/mixins';
+
+// Vendor assets
+@import 'vendor/normalize';
+
+// Base styles
+@import 'base/global';
+@import 'base/grid';
+// @import 'base/print';
+
+// Components
+@import 'components/navs';
+@import 'components/forms';
+@import 'components/buttons';
+
+// Layout
+@import 'layout/header';
+@import 'layout/footer';
+
+// Helpers
+@import 'helpers/clearfix';
+@import 'helpers/center';
+@import 'helpers/margin';
+@import 'helpers/padding';
+@import 'helpers/text-align';
+@import 'helpers/background';
+@import 'helpers/color';
+@import 'helpers/hide';
+@import 'helpers/show';
+
+$DEBUG: false;
+
+@if $DEBUG {
+    body {
+        position: relative;
+
+        &:after {
+            content: 'default';
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 9999;
+            display: block;
+            background: red;
+            font-family: sans-serif;
+            text-transform: uppercase;
+            color: #fff;
+            padding: 5px;
+
+            @each $breakpoint-name, $breakpoint-size in $breakpoints {
+                @include media($breakpoint-size) {
+                    content: '#{$breakpoint-name}';
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,10 @@
+@each $breakpoint-name, $breakpoint-size in $breakpoints {
+
+    .hide-#{$breakpoint-name}-up {
+
+        @include media($breakpoint-size) {
+            display: none;
+        }
+    }
+
+}

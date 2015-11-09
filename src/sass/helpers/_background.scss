@@ -1,0 +1,23 @@
+.bg-gray {
+    background-color: $gray;
+}
+
+.bg-gray-dark {
+    background-color: $gray-dark;
+}
+
+.bg-primary {
+    background-color: $brand-primary;
+}
+
+.bg-secondary {
+    background-color: $brand-secondary;
+}
+
+.bg-fade-left {
+    background: linear-gradient(to right, rgba($black, .5) 50%, rgba($black, 0) 100%);
+}
+
+.bg-fade-bottom {
+    background-image: linear-gradient(to bottom, rgba($black, 0) 50%, rgba($black, .5) 100%);
+}
