@@ -27,11 +27,13 @@ $base-line-height: 1.4;
 
 // Colors
 
-$brand-primary: tomato;
+$brand-primary: #ffa44b;
 $brand-primary-dark: darken($brand-primary, 10%);
 
-$brand-secondary: #c0ffee;
+$brand-secondary: #58544b;
 $brand-secondary-dark: darken($brand-secondary, 10%);
+
+$brand-tertiary: #edebe1;
 
 $gray-base: #000;
 $gray-light: lighten($gray-base, 20%);
