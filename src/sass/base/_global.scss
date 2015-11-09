@@ -17,6 +17,11 @@ body {
     font-family: $font-family-sans-serif;
 }
 
+p {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
 a {
     color: $link-color;
     text-decoration: none;
