@@ -13,24 +13,22 @@
 // @import 'base/print';
 
 // Components
-@import 'components/navs';
-@import 'components/forms';
-@import 'components/buttons';
+// @import 'components/navs';
+// @import 'components/forms';
+// @import 'components/buttons';
 
 // Layout
 @import 'layout/header';
-@import 'layout/footer';
+// @import 'layout/footer';
 
 // Helpers
 @import 'helpers/clearfix';
-@import 'helpers/center';
-@import 'helpers/margin';
+// @import 'helpers/center';
+// @import 'helpers/margin';
 @import 'helpers/padding';
-@import 'helpers/text-align';
+// @import 'helpers/text-align';
 @import 'helpers/background';
 @import 'helpers/color';
-@import 'helpers/hide';
-@import 'helpers/show';
 
 $DEBUG: false;
 
@@ -56,6 +54,8 @@ $DEBUG: false;
                     content: '#{$breakpoint-name}';
                 }
             }
+// @import 'helpers/hide';
+// @import 'helpers/show';
         }
     }
 }
