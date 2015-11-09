@@ -1,6 +1,6 @@
 $grid-prefix: 'col' !default;
 $grid-columns: 12;
-$grid-gutter-width: 30px;
+$grid-gutter-width: 60px;
 
 @if ($grid-prefix != '') {
     $grid-prefix: "#{$grid-prefix}-";
