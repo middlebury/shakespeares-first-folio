@@ -1,0 +1,174 @@
+
+.section {
+    position: relative;
+}
+
+.section__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+}
+
+.section__background--faded {
+    opacity: .8;
+}
+
+.section__content {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.section--hero {
+
+    @include media(md) {
+        padding-top: 200px;
+    }
+
+    .section__background {
+        background-position: 50% 0;
+    }
+
+    .section__title {
+        font-weight: 400;
+        line-height: 1;
+        margin-bottom: 5px;
+        font-size: 48px;
+
+        @include media(md) {
+            font-size: 60px;
+        }
+    }
+
+    p {
+        font-size: 22px;
+        max-width: 32em;
+    }
+}
+
+.section--intro {
+    background-color: $brand-secondary;
+    color: $white;
+
+    h3 {
+        font-size: 16px;
+        font-weight: 400;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+
+        @include media(lg) {
+            font-size: 20px
+        }
+    }
+
+    q {
+        font-size: 20px;
+        margin-bottom: 5px;
+
+        @include media(sm) {
+            font-size: 28px;
+        }
+
+        @include media(lg) {
+            font-size: 34px
+        }
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 32px;
+        margin-top: 50px;
+
+        @include media(sm) {
+            font-size: 18px;
+        }
+
+        @include media(lg) {
+            font-size: 20px
+        }
+    }
+}
+
+.portrait {
+    position: relative;
+    // min-height: 300px;
+    padding-top: 100%;
+    overflow: hidden;
+
+    @include media(sm) {
+        // min-height: 400px;
+    }
+
+    @include media(lg) {
+        min-height: 480px;
+        padding-top: inherit;
+    }
+
+    .portrait__image {
+        position: absolute;
+        top: -10%;
+        left: -40%;
+        width: 180%;
+        height: 180%;
+        background-size: cover;
+        background-position: center center;
+    }
+}
+
+.section--about {
+    color: $brand-secondary;
+
+    .section__title {
+        font-size: 34px;
+        font-weight: normal;
+        margin-bottom: 0;
+        font-family: $font-family-sans-serif;
+        font-style: italic;
+    }
+
+    p {
+        font-size: 18px;
+        line-height: 36px;
+    }
+}
+
+.section--events {
+    background-color: $brand-tertiary;
+    color: $brand-secondary;
+    padding-top: 75px;
+    // font-size: 18px;
+
+    .section__title {
+        font-size: 34px;
+        font-weight: normal;
+        color: $brand-primary;
+        margin-bottom: 0;
+    }
+
+    .section__intro {
+        font-size: 20px;
+        line-height: 36px;
+    }
+
+    h2 {
+        font-size: 18px;
+        margin-bottom: 0;
+    }
+
+    p {
+        font-size: 16px;
+    }
+}
+
+.section__rule {
+    height: 1px;
+    background-color: $brand-secondary;
+    border: 0;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
