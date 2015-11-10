@@ -104,12 +104,12 @@
     overflow: hidden;
 
     @include media(sm) {
-        // min-height: 400px;
-    }
-
-    @include media(lg) {
         min-height: 480px;
         padding-top: inherit;
+    }
+
+    @include media(md) {
+        min-height: 550px;
     }
 
     .portrait__image {
