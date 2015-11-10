@@ -157,6 +157,10 @@
         line-height: 36px;
     }
 
+    .row + .row {
+        margin-top: 50px;
+    }
+
     h2 {
         font-size: 18px;
         margin-bottom: 0;
