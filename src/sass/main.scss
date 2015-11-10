@@ -23,3 +23,11 @@
 @import 'helpers/padding';
 @import 'helpers/background';
 @import 'helpers/color';
+
+.divider {
+    height: 1px;
+    background-color: $brand-secondary;
+    border: 0;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
