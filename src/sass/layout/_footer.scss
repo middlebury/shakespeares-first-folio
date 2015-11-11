@@ -1,3 +1,35 @@
 .global-footer {
-    background-color: $brand-tertiary;
+    background-color: $white;
+    padding-top: 50px;
+
+    a {
+        color: #000;
+    }
+
+    ul {
+        padding-left: 0;
+        list-style-type: none;
+
+        li {
+            margin-bottom: 10px;
+
+            a {
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+.footer-sponsor-box {
+    margin-bottom: 50px;
+}
+
+.footer-support-box {
+    border-left: 1px solid lightgray;
+    padding-left: 50px;
+    margin-bottom: 50px;
+}
+
+.footer-copyright {
+    text-align: center;
 }
