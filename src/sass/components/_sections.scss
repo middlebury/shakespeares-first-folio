@@ -25,6 +25,7 @@
 
 .section--hero {
     color: $white;
+    background-color: $black;
 
     @include media(md) {
         padding-top: 200px;
