@@ -107,6 +107,11 @@
 .section--about {
     color: $brand-secondary;
 
+    .section__content {
+        // padding-top: 20px;
+        padding-left: 20px;
+    }
+
     .section__title {
         font-size: 34px;
         font-weight: normal;
