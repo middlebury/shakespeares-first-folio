@@ -113,11 +113,15 @@
     }
 
     .section__title {
-        font-size: 34px;
+        font-size: 28px;
         font-weight: normal;
         margin-bottom: 0;
         font-family: $font-family-sans-serif;
         font-style: italic;
+
+        @include media(lg) {
+            font-size: 34px;
+        }
     }
 
     p {
