@@ -42,3 +42,29 @@
     margin-top: 0;
     margin-bottom: 0;
 }
+
+.boxed-image {
+    position: relative;
+    // min-height: 300px;
+    padding-top: 80%;
+    overflow: hidden;
+
+    @include media(sm) {
+        min-height: 480px;
+        padding-top: inherit;
+    }
+
+    @include media(md) {
+        min-height: 550px;
+    }
+}
+
+.boxed-image__background-image {
+    position: absolute;
+    top: -10%;
+    left: -10%;
+    width: 120%;
+    height: 120%;
+    background-size: cover;
+    background-position: center center;
+}
