@@ -1,13 +1,15 @@
-$logo-width: 45px;
+$logo-width: 45px + 20;
+$wordmark-width: 107px + 20;
 $gutter-width: 15px;
 $wordmark-spacing: 12px;
 
 .global-header {
     background-color: $middlebury-blue;
-    height: 50px;
+    height: 70px;
     position: relative;
     z-index: 3;
 }
+
 .global-header-logo {
     text-align: center;
     margin: 0 auto;
@@ -28,12 +30,12 @@ $wordmark-spacing: 12px;
 
 .global-header-wordmark {
     display: none;
-    width: 107px;
+    width: $wordmark-width;
 
     @include media(md) {
         display: block;
         position: absolute;
-        top: 21px;
+        top: 26px;
         left: $logo-width + $gutter-width + $wordmark-spacing;
     }
 }
