@@ -13,6 +13,7 @@
 
 // Components
 @import 'components/sections';
+@import 'components/events';
 @import 'components/boxed-image';
 @import 'components/divider';
 
@@ -25,21 +26,3 @@
 @import 'helpers/padding';
 @import 'helpers/background';
 @import 'helpers/color';
-
-.event {
-    margin-top: 50px;
-    padding-top: 50px;
-    border-top: 1px solid #dedddb;
-}
-
-.event__date {
-    font-size: 14px;
-    font-weight: bold;
-}
-
-.event__title {
-    font-size: 20px;
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
