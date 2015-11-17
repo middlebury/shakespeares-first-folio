@@ -48,10 +48,11 @@
     }
 
     .section__title {
-        font-weight: 400;
         line-height: 1;
         margin-bottom: 5px;
         font-size: 48px;
+
+        @include sentinelMedium();
 
         @include media(md) {
             font-size: 60px;
@@ -70,7 +71,7 @@
 
     h3 {
         font-size: 16px;
-        font-weight: 400;
+        font-weight: 500;
         letter-spacing: 1px;
         text-transform: uppercase;
         margin-top: 50px;
@@ -120,13 +121,12 @@
 
     .section__title {
         font-size: 28px;
-        font-weight: normal;
-        margin-bottom: 0;
-        font-family: $font-family-sans-serif;
+        font-weight: 500;
         font-style: italic;
+        margin-bottom: 0;
 
         @include media(lg) {
-            font-size: 34px;
+            font-size: 32px;
         }
     }
 
@@ -143,9 +143,9 @@
 
     .section__title {
         font-size: 34px;
-        font-weight: normal;
         color: $brand-primary;
         margin-bottom: 0;
+        @include sentinelMedium();
     }
 
     .section__intro {

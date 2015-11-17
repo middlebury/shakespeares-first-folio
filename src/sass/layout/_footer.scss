@@ -4,6 +4,10 @@
     padding-bottom: 10px;
     text-align: center;
 
+    strong {
+        @include whitneySemibold();
+    }
+
     @include media(md) {
         text-align: left;
     }
@@ -20,7 +24,7 @@
             margin-bottom: 10px;
 
             a {
-                font-weight: bold;
+                @include whitneySemibold();
             }
         }
     }
