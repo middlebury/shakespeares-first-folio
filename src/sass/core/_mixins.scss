@@ -46,3 +46,24 @@
         }
     }
 }
+
+@mixin sentinelMedium() {
+    font-family: $font-family-serif;
+    font-weight: 500;
+}
+
+@mixin sentinelMediumItalic() {
+    font-family: $font-family-serif;
+    font-style: italic;
+    font-weight: 500;
+}
+
+@mixin whitneyBook() {
+    font-family: $font-family-sans-serif;
+    font-weight: 400;
+}
+
+@mixin whitneySemibold() {
+    font-family: $font-family-sans-serif;
+    font-weight: 600;
+}
