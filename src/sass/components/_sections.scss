@@ -28,6 +28,21 @@
     bottom: 0;
 }
 
+.section__title {
+    font-size: 30px;
+    line-height: 1.2;
+    margin-bottom: 5px;
+}
+
+.section__lead {
+    font-size: 18px;
+    line-height: 32px;
+
+    @include media(lg) {
+        font-size: 20px;
+    }
+}
+
 .section--hero {
     color: $white;
     background-color: $black;
@@ -47,20 +62,18 @@
     }
 
     .section__title {
-        line-height: 1;
-        margin-bottom: 5px;
         font-size: 48px;
 
-        @include sentinelMedium();
-
-        @include media(md) {
-            font-size: 60px;
+        @include media(lg) {
+            font-size: 62px;
         }
     }
 
-    p {
-        font-size: 22px;
-        max-width: 32em;
+    .section__lead {
+        @include media(md) {
+            max-width: 32em;
+            font-size: 24px;
+        }
     }
 }
 
@@ -68,13 +81,14 @@
     background-color: $brand-secondary;
     color: $white;
 
-    h3 {
+    .section__title {
         font-size: 16px;
-        font-weight: 500;
         letter-spacing: 1px;
         text-transform: uppercase;
         margin-top: 50px;
         margin-bottom: 10px;
+
+        @include whitneySemibold();
 
         @include media(lg) {
             font-size: 20px;
@@ -94,9 +108,7 @@
         }
     }
 
-    p {
-        font-size: 16px;
-        line-height: 32px;
+    .section__lead {
         margin-top: 50px;
         margin-bottom: 50px;
 
@@ -114,41 +126,26 @@
     color: $brand-secondary;
 
     .section__content {
-        // padding-top: 20px;
-        padding-left: 20px;
-    }
-
-    .section__title {
-        font-size: 28px;
-        font-weight: 500;
-        font-style: italic;
-        margin-bottom: 0;
-
         @include media(lg) {
-            font-size: 32px;
+            padding-top: 50px;
+            padding-left: 20px;
         }
     }
 
-    p {
-        font-size: 18px;
-        line-height: 36px;
+    .section__title {
+        font-style: italic;
     }
 }
 
 .section--events {
-    color: $brand-secondary;
     padding-top: 75px;
     padding-bottom: 75px;
 
     .section__title {
-        font-size: 34px;
         color: $brand-primary;
-        margin-bottom: 0;
-        @include sentinelMedium();
     }
 
-    .section__intro {
-        font-size: 20px;
-        line-height: 36px;
+    .section__lead {
+        color: $brand-secondary;
     }
 }
