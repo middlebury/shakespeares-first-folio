@@ -27,3 +27,9 @@
 @import 'helpers/padding';
 @import 'helpers/background';
 @import 'helpers/color';
+
+.small-caps {
+    text-transform: uppercase;
+    font-size: 80%;
+    @include whitneySemibold();
+}
