@@ -60,7 +60,6 @@ gulp.task('img', function() {
 
 gulp.task('sass', function() {
     return gulp.src('./src/sass/main.scss')
-        // .pipe(watch('_scss/**/*.scss'))
         .pipe(plumber({
             errorHandler: reportError
         }))
