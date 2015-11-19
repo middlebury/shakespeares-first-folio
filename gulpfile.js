@@ -81,6 +81,8 @@ gulp.task('watch', function() {
     gulp.watch('./src/*.html', ['html']);
 });
 
+gulp.task('build', ['img', 'sass']);
+
 gulp.task('deploy', ['build'], function() {
     return gulp.src('./dist/**/*')
         .pipe(ghPages({
