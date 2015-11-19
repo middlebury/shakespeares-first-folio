@@ -1,21 +1,18 @@
 {
-  "name": "glint",
+  "name": "shakespeares-first-folio",
   "version": "1.0.0",
-  "description": "This is my go-to structure for Sass and starting on CSS",
-  "main": "gulpfile.js",
+  "description": "One page static site for First Folio! exhibition at Middlebury",
+  "main": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zebapy/glint.git"
+    "url": "git+https://github.com/middleburydigitalservices/shakespeares-first-folio.git"
   },
-  "author": "Zebhdiyah Pykosz",
-  "license": "ISC",
   "bugs": {
-    "url": "https://github.com/zebapy/glint/issues"
+    "url": "https://github.com/middleburydigitalservices/shakespeares-first-folio/issues"
   },
-  "homepage": "https://github.com/zebapy/glint#readme",
   "devDependencies": {
     "browser-sync": "^2.8.2",
     "gulp": "^3.9.0",
