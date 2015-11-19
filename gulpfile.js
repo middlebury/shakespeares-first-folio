@@ -9,6 +9,7 @@ var minifyCss = require('gulp-minify-css');
 var notify = require('gulp-notify');
 var plumber = require('gulp-plumber');
 var gutil = require('gulp-util');
+var ghPages = require('gulp-gh-pages');
 var cp = require('child_process');
 
 // Custom error handler from
@@ -78,6 +79,13 @@ gulp.task('watch', function() {
     gulp.watch('./src/sass/**/*.scss', ['sass']);
     gulp.watch(['./src/img/*.jpg', './src/img/*.png'], ['img']);
     gulp.watch('./src/*.html', ['html']);
+});
+
+gulp.task('deploy', ['build'], function() {
+    return gulp.src('./dist/**/*')
+        .pipe(ghPages({
+            branch: 'site'
+        }));
 });
 
 gulp.task('default', ['browser-sync', 'watch']);
