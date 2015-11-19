@@ -6,7 +6,6 @@ var sourcemaps = require('gulp-sourcemaps');
 var imagemin = require('gulp-imagemin');
 var cmq = require('gulp-combine-mq');
 var minifyCss = require('gulp-minify-css');
-var uglify = require('gulp-uglify');
 var notify = require('gulp-notify');
 var plumber = require('gulp-plumber');
 var gutil = require('gulp-util');
@@ -39,7 +38,7 @@ var reportError = function (error) {
     this.emit('end');
 }
 
-gulp.task('browser-sync', ['img', 'html', 'js', 'sass'], function() {
+gulp.task('browser-sync', ['img', 'html', 'sass'], function() {
     browserSync.init({
         open: false,
         ui: false,
@@ -78,22 +77,8 @@ gulp.task('sass', function() {
         .pipe(notify('Sass task complete'));
 });
 
-gulp.task('js', function() {
-    return gulp.src('./src/js/**/*.js')
-        .pipe(plumber({
-            errorHandler: reportError
-        }))
-        .pipe(sourcemaps.init())
-        .pipe(env === 'production' ? uglify() : gutil.noop())
-        .pipe(sourcemaps.write('./'))
-        .pipe(gulp.dest('./dist/js'))
-        .pipe(browserSync.reload({ stream: true }))
-        .pipe(notify('Javascript task complete'));
-})
-
 gulp.task('watch', function() {
     gulp.watch('./src/sass/**/*.scss', ['sass']);
-    gulp.watch('./src/js/**/*.js', ['js']);
     gulp.watch(['./src/img/*.jpg', './src/img/*.png'], ['img']);
     gulp.watch('./src/*.html', ['html']);
 });
