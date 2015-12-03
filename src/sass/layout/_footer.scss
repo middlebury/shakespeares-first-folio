@@ -47,6 +47,22 @@
     }
 }
 
-.footer-copyright {
+.footer-info {
     text-align: center;
+
+    a {
+        font-weight: bold;
+    }
+}
+
+.footer-info__contact {
+    // margin-bottom: 0;
+}
+
+.footer-info__copyright {
+    font-size: 14px;
+
+    a {
+        font-weight: normal;
+    }
 }
