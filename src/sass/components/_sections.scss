@@ -120,6 +120,16 @@
             font-size: 20px;
         }
     }
+
+    a {
+      color: darken($white, 10%);
+      border-color: darken($white, 10%);
+
+      &:hover {
+        color: $white;
+        border-color: $white;
+      }
+    }
 }
 
 .section--about {
