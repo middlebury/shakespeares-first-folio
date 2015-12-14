@@ -23,12 +23,19 @@ p {
 }
 
 a {
-    color: $link-color;
+    color: inherit;
     text-decoration: none;
+    border-bottom: 1px solid rgba($black, .25);
+    // transition: border-color .2s;
 
     &:hover {
-        color: $link-color-hover;
-        text-decoration: underline;
+        // color: $link-color-hover;
+        // text-decoration: underline;
+        border-color: rgba($black, .75);
+    }
+
+    &.no-border {
+      border: 0;
     }
 }
 
