@@ -1,7 +1,8 @@
 .event {
     margin-top: 50px;
-    padding-top: 50px;
-    border-top: 1px solid #dedddb;
+    margin-bottom: 50px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #dedddb;
 }
 
 .event__date {
@@ -14,4 +15,9 @@
     @include sentinelMedium();
     margin-top: 0;
     margin-bottom: 0;
+}
+
+.events-heading {
+    color: $brand-primary;
+    @include whitneyBook();
 }
