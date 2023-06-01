@@ -4,6 +4,14 @@ One-page microsite for First Folio! The Book that Gave Us Shakespeare: an exhibi
 
 ## Dependencies
 
+- Node 18.x
+
+To check if you already have node installed, open terminal and use the following command:
+
+```bash
+node -v
+```
+
 - Gulp `npm install -g gulp`
 
 Install node/gulp dependencies:

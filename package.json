@@ -13,19 +13,23 @@
   "bugs": {
     "url": "https://github.com/middleburydigitalservices/shakespeares-first-folio/issues"
   },
-  "devDependencies": {
-    "browser-sync": "^2.8.2",
-    "gulp": "^3.9.0",
-    "gulp-autoprefixer": "^2.3.1",
+  "dependencies": {
+    "browser-sync": "^2.29.3",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^6.1.0",
     "gulp-combine-mq": "^0.4.0",
     "gulp-gh-pages": "^0.5.4",
-    "gulp-imagemin": "^2.3.0",
-    "gulp-minify-css": "^1.2.1",
-    "gulp-notify": "^2.2.0",
-    "gulp-plumber": "^1.0.1",
-    "gulp-rename": "^1.2.2",
-    "gulp-sass": "^2.0.4",
-    "gulp-sourcemaps": "^1.5.2",
-    "gulp-util": "^3.0.6"
+    "gulp-imagemin": "^4.1.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-notify": "^4.0.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-util": "^3.0.8",
+    "node-sass": "^9.0.0"
+  },
+  "overrides": {
+    "graceful-fs": "^4.2.11"
   }
 }
